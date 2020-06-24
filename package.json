@@ -1,0 +1,26 @@
+{
+  "name": "temperature_monitor",
+  "version": "1.0.0",
+  "description": "monitor temperatures",
+  "main": "lib/index.js",
+  "author": "edward3h",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "dependencies": {
+    "@babel/register": "^7.10.3",
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2"
+  },
+  "scripts": {
+    "build": "babel main -d lib",
+    "postinstall": "script/bootstrap"
+  }
+}
