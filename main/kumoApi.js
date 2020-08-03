@@ -41,7 +41,7 @@ const getRoomStatus = async (name) => {
 
 const getTemps = async () => {
   const rooms = await getRooms();
-  return rooms.map(async (v) => getRoomStatus(await v));
+  return Promise.all(rooms.map(async (v) => getRoomStatus(await v)));
 };
 
 export default getTemps;
